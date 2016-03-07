@@ -1,7 +1,10 @@
 package fr.rest.service;
 
+import com.mkyong.stock.bo.StockBo;
 import com.mkyong.stock.model.Stock;
 import com.rest.employee.model.Employee;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -18,9 +21,6 @@ import java.util.List;
 @Path("/emp")
 public class EmployeeService {
 
-//    @Autowired
-//    StockBo stockBo;
-
     @GET
     @Path("/get/{empID}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -32,15 +32,25 @@ public class EmployeeService {
         return employee;
     }
 
+
     @GET
     @Path("/allStock")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Stock> getlisteStock(){
+//        int id=1;
+//        em.find(Stock.class,id);
+//        StockBoImpl stockBo =new StockBoImpl();
+
         List<Stock> stocks =new ArrayList<Stock>() ;
-//        ApplicationContext appContext =
-//                new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
-//        StockBo stockBo = (StockBo) appContext.getBean("stockBo");
-//         stocks = stockBo.findAllStock();
+
+        ApplicationContext appContext = new ClassPathXmlApplicationContext("spring/config/BeanLocations.xml");
+        StockBo stockBo = (StockBo) appContext.getBean("stockBo");
+         stocks = stockBo.findAllStock();
+
+        for (Stock st : stocks) {
+            System.out.println(st.getStockName());
+        }
+
         return stocks;
     }
 
