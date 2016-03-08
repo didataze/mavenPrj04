@@ -1,0 +1,13 @@
+<div ng-repeat="pr in listPosts">
+
+    <h1>{{pr.stockCode}}</h1>
+
+    <p> {{pr.stockName | uppercase}} <br>
+        <!--{{pr.stockId}}-->
+    </p>
+    <p>
+        <a href="#/comments/{{pr.stockId}}">{{pr.stockId.length}} Commentaires</a>
+    </p>
+    <hr>
+
+</div>

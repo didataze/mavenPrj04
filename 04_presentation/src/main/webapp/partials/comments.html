@@ -1,0 +1,15 @@
+    <input type="text" ng-model="query" placeholder="Enter here">
+    <hr>
+    <select ng-model="order">
+        <option value="stockCode">Organiser par Code</option>
+        <option value="stockName">Organiser par Namse</option>
+    </select>
+    <hr>
+
+        <div ng-repeat="pr in listProducts | filter:query | orderBy:order">
+            <p>
+            <strong>{{pr.stockCode}}</strong><br>
+                <!--{{pr.stockId}}<br>-->
+                {{pr.stockName | uppercase}}
+            </p>
+     </div>
