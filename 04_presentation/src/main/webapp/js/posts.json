@@ -2,7 +2,7 @@
     {
         "stockCode": "Nocha",
         "stockId": "1",
-        "stockName": "GENM bcp blabla ",
+        "stockName": "GENM bcp blabla<br>GENM bcp blabla<br>GENM bcp blabla ",
         "comments": [
             {
                 "stockCode": "Nocha",
@@ -20,7 +20,7 @@
     {
         "stockCode": "Idetica",
         "stockId": "4",
-        "stockName": "quelques fonctions d",
+        "stockName": "quelques fonctions d<br>GENM bcp blabla<br>GENM bcp blabla",
         "comments": [
             {
                 "stockCode": "Nocha",
@@ -33,7 +33,7 @@
     {
         "stockCode": "Ali",
         "stockId": "5",
-        "stockName": "web et du graphisme.",
+        "stockName": "web et du graphisme.<br>GENM bcp blabla<br>GENM bcp blabla",
         "comments": [
             {
                 "stockCode": "Nocha",
@@ -56,7 +56,7 @@
     {
         "stockCode": "Ebra",
         "stockId": "6",
-        "stockName": "Mais dans le cadre ",
+        "stockName": "Mais dans le cadre <br>GENM bcp blabla<br>GENM bcp blabla ",
         "comments": [
             {
                 "stockCode": "Nocha",

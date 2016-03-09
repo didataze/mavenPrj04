@@ -1,20 +1,61 @@
+<div class="page-header">
+    <a class="btn btn-primary" href="#/"><span class="glyphicon glyphicon-home"></span> Revenir aux article</a><br>
+</div>
 
-<a href="#/">Revenir aux article</a><br>
 
-<input type="text" ng-model="query" placeholder="Enter here">
-    <hr>
-    <select ng-model="order">
+<div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2">@</span>
+    <input type="text" ng-model="query" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+</div>
+
+
+<!--<input type="text" ng-model="query" placeholder="Enter here"><br>-->
+<div class="input-group">
+    <span class="input-group-addon" id="sizing-addon2">@</span>
+    <select ng-model="order" class="form-control">
         <option value="stockCode">Organiser par Code</option>
-        <option value="stockName">Organiser par Namse</option>
+        <option value="stockName">Organiser par Names</option>
     </select>
-    <hr>
-
+</div>
 <hr>
-<h1>{{title}}</h1>
-        <div ng-repeat="pr in listComments | filter:query | orderBy:order">
-            <p>
-            <strong>{{pr.stockCode}}</strong><br>
-                <!--{{pr.stockId}}<br>-->
+
+
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading">{{title}}</h4>
+        <p class="list-group-item-text">Detail des articles :</p>
+    </a>
+<!--</div>-->
+
+<!--<div class="list-group">-->
+    <div ng-repeat="pr in listComments | filter:query | orderBy:order">
+        <a href="#" class="list-group-item">
+            <h4 class="list-group-item-heading">{{pr.stockCode}}</h4>
+            <p class="list-group-item-text">
+                Commentaire : <br>
                 {{pr.stockName | uppercase}}
             </p>
-     </div>
+        </a>
+    </div>
+</div>
+
+
+<!--<div class="jumbotron">-->
+<!--<div class="alert alert-info">-->
+<!--<p><strong>{{title}}</strong></p>-->
+<!--</div>-->
+<!--<div ng-repeat="pr in listComments | filter:query | orderBy:order">-->
+<!--<p>-->
+<!--<strong>{{pr.stockCode}}</strong><br>-->
+<!--&lt;!&ndash;{{pr.stockId}}<br>&ndash;&gt;-->
+<!--{{pr.stockName | uppercase}}-->
+<!--</p>-->
+<!--<hr>-->
+
+<!--</div>-->
+<!--</div>-->
+
+
+
+
+

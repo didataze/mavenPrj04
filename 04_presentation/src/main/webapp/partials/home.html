@@ -1,14 +1,27 @@
-
 <div ng-repeat="pr in listPosts">
 
-    <h1>{{pr.stockCode}}</h1>
 
-    <p> {{pr.stockName | uppercase}} <br>
-        <!--{{pr.stockId}}-->
-    </p>
-    <p>
-        <a href="#/comments/{{pr.stockId}}">{{pr.stockId.length}} Commentaires</a>
-    </p>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <strong> {{pr.stockCode}} </strong>
+        </div>
+        <div class="panel-body">
+            {{pr.stockName | uppercase}}
+        </div>
+        <div class="panel-footer">
+            <a class="btn btn-info" href="#/comments/{{pr.stockId}}"><span
+                    class="badge">{{pr.comments.length}}</span>
+                Commentaires </a>
+        </div>
+    </div>
+
+
+    <!--<div class="alert alert-info">-->
+        <!--<p><strong>{{pr.stockName | uppercase}} </strong><br>-->
+            <!--&lt;!&ndash;{{pr.stockId}}&ndash;&gt;-->
+        <!--</p>-->
+    <!--</div>-->
+
     <hr>
 
 </div>
