@@ -19,7 +19,7 @@ app.factory('PostFactory',function (){
                 {
                     "stockCode": "Nocha",
                     "stockId": "1",
-                    "stockName": "GENM bcp blabla<br>GENM bcp blabla<br>GENM bcp blabla",
+                    "stockName": "GENM bcp blabla GENM ",
                     "comments": [
                         {
                             "stockCode": "Nocha",
