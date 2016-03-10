@@ -1,41 +1,27 @@
 <div class="page-header">
-    <a class="btn btn-primary" href="#/"><span class="glyphicon glyphicon-home"></span> Revenir aux article</a><br>
+    <a class="btn btn-primary" href="#/"><span class="glyphicon glyphicon-home"></span> Revenir aux article</a>
 </div>
 
-
+<br>
 <div class="row bs-example">
     <div class="col-xs-6">
-        <!--<div class="input-group">-->
         <input type="text" ng-model="query" class="form-control" placeholder="Search">
-        <!--<span class="input-group-addon" id="sizing-addon2">@</span>-->
-        <!--<input type="text" ng-model="query" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">-->
-        <!--</div>-->
     </div>
-    <!--<div class="clearfix visible-sm-block"></div>-->
     <div class="col-xs-6">
-        <!--<div class="input-group bs-example">-->
         <select ng-model="order" class="form-control">
             <option value="stockCode" selected="selected">Organiser par Code</option>
             <option value="stockName">Organiser par Noms</option>
         </select>
-        <!--</div>-->
     </div>
 </div>
 
-
-<!--<input type="text" ng-model="query" placeholder="Enter here"><br>-->
-
 <hr>
-
 
 <div class="list-group bs-example">
     <a href="#" class="list-group-item active">
         <h4 class="list-group-item-heading">{{title}}</h4>
         <p class="list-group-item-text">Detail des articles :</p>
     </a>
-    <!--</div>-->
-
-    <!--<div class="list-group">-->
     <div ng-repeat="pr in listComments | filter:query | orderBy:order">
         <a href="#" class="list-group-item">
             <h4 class="list-group-item-heading">{{pr.stockCode}}</h4>
@@ -46,24 +32,3 @@
         </a>
     </div>
 </div>
-
-
-<!--<div class="jumbotron">-->
-<!--<div class="alert alert-info">-->
-<!--<p><strong>{{title}}</strong></p>-->
-<!--</div>-->
-<!--<div ng-repeat="pr in listComments | filter:query | orderBy:order">-->
-<!--<p>-->
-<!--<strong>{{pr.stockCode}}</strong><br>-->
-<!--&lt;!&ndash;{{pr.stockId}}<br>&ndash;&gt;-->
-<!--{{pr.stockName | uppercase}}-->
-<!--</p>-->
-<!--<hr>-->
-
-<!--</div>-->
-<!--</div>-->
-
-
-
-
-
